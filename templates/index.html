@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<title>login page</title>
+	<style>
+		body{
+	margin: 0;
+	padding: 0;
+	background: url(/static/back.jpg);
+	background-size: cover;
+	font-family: sans-serif;
+}
+
+.loginBox{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 350px;
+	height: 520px;
+	padding: 80px 40px;
+	box-sizing: border-box;
+	background: rgba(0,0,0,0.5);
+}   
+
+.user{
+	border-radius: 50%;
+	overflow: hidden;
+	position: absolute;
+	top: calc(-100px/2);
+	left: calc(33%); 
+}
+
+h2{
+	margin: 0;
+	padding: 0 0 20px;
+	color: white;
+	text-align: center;
+}
+
+a{
+	color: rgb(255,100,100);
+	font-size: 15px;
+}
+p{
+	color: white;
+}
+
+.loginBox p{
+	margin: 0;
+	padding: 0;
+	font-weight: bold;
+}
+
+.loginBox input{
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+.loginBox input[type="text"],
+.loginBox input[type="Password"]
+{
+	border: none;
+	border-bottom: 0.5px solid #fff;
+	background: transparent;
+	outline: none;
+	height: 30px;
+	color: #fff;
+}
+
+::placeholder{
+	color: rgba(255,255,255,0.5);
+}
+
+.loginBox input[type="submit"]
+{
+	border: none;
+	outline: none;
+	height: 40px;
+	color: #fff;
+	font-size: 16px;
+	background: #ff267e;
+	cursor: pointer;
+	border-radius: 20px;
+}
+
+.loginBox input[type="submit"]:hover
+{
+	background: #efed40;
+	color: #262626;
+}
+
+.loginBox a{
+	font-weight: bold;
+	text-decoration: none;
+}
+	</style>
+</head>
+<body>
+
+	<div class="loginBox">
+		<h2 style="color:purple">Diabetes Checker</h2>
+		<form action = '/getresult' method='POST' >
+		<label style="color:yellow">Glucose level</label><br/>
+		<input type="number"  name="Glucose" placeholder=""><br/>
+		<label style="color:yellow">Blood Pressure</label><br/>
+		<input type="number"   name="BloodPressure" placeholder=""><br/>
+		<label style="color:yellow">Insulin level</label><br/>
+		<input type="number"  name="Insulin" placeholder=""><br/>
+		<label style="color:yellow">BMI</label><br/>
+		<input type="number"  name="BMI" placeholder=""><br/>
+		<label style="color:yellow"> DPF</label><br/>
+		<input type="number"   name="DPF" placeholder=""><br/>
+		<label style="color:yellow">Age</label><br/>
+		<input type="number"   name="Age" placeholder=""><br/>
+		<button >Submit</button>
+	</form>
+	</div>
+
+</body>
+</html>

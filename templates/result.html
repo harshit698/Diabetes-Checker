@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Diabetes Checker</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style type="text/css">
+	body{
+	margin: 0;
+	padding: 0;
+	background: url(/static/back.jpg);
+	background-size: cover;
+}
+#clickme
+{
+	
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 0px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#demo{
+	position: absolute;
+    left: 500px;
+    top: 300px;
+    color:purple;
+    font-family: sans-serif;
+}
+</style>
+<script type="text/javascript">
+	function disp_res()
+	{
+		var loading = document.getElementById("clickme");
+		if ({{prediction}} == 1)
+		{
+			document.getElementById("demo").innerHTML = "Uhh oh! You might have ";
+		}
+		else
+		{
+			document.getElementById("demo").innerHTML = "Congratulations you don't have";
+		}
+		loading.style.visibility = "hidden" ;
+	}
+</script>
+</head>
+<body>
+	<div style="text-align: center; position: relative;" >
+	<h2 id="demo"></h2>
+	<button style="display: inline-block; position: absolute; top: 300px;" id="clickme" onClick="disp_res()">Display Result</button></div>
+	
+</body>
+</html>
